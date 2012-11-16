@@ -11,7 +11,7 @@ def getDirectoryStructure(path):
 	fout = open("musiclist.txt", "w")
 	for (path, dirs, files) in os.walk(path):
 
-	   	fout.write("--------------------------\n")
+	fout.write("--------------------------\n")
 	    fout.write(path + "\n")
 	    for d in dirs:
 	    	fout.write("\t" + d + "\n")
