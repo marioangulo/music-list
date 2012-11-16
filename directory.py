@@ -7,17 +7,18 @@
 import os
 
 def getDirectoryStructure(path):
-	i = 0
-	fout = open("musiclist.txt", "w")
-	for (path, dirs, files) in os.walk(path):
 
-	fout.write("--------------------------\n")
+	fout = open("musiclist.txt", "w")
+
+	for (path, dirs, files) in os.walk(path):
+		fout.write("--------------------------\n")
 	    fout.write(path + "\n")
 	    for d in dirs:
 	    	fout.write("\t" + d + "\n")
 		for f in files:
 			fout.write("\t\t" + f + "\n")
 	    fout.write("--------------------------\n")
+	    
 	fout.close()
 	print "Finished!"
 
